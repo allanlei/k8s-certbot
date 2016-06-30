@@ -1,0 +1,1 @@
+certbot -c /etc/letsencrypt/cli.ini certonly $EMAIL --agree-tos --standalone --manual-public-ip-logging-ok -d $DOMAINS
