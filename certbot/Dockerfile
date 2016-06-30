@@ -6,8 +6,6 @@ COPY        certbot.ini.tmp /etc/certbot/certbot.ini.tmp
 RUN         apk --no-cache add \
                 gettext \
                 certbot && \
-            apk --no-cache --repository https://dl-3.alpinelinux.org/alpine/edge/testing add \
-                incron && \
             chmod +x /entrypoint.sh && \
             mkdir -p /etc/certbot && \
             echo "certbot certonly -c /etc/certbot/certbot.ini" > /etc/periodic/daily/certbot && \

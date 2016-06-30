@@ -14,4 +14,5 @@ export STANDALONE_SUPPORTED_CHALLENGES=${STANDALONE_SUPPORTED_CHALLENGES:-http-0
 
 export domains=$(echo $DOMAINS | sed 's/, / /g' | sed 's/ /,/g')
 envsubst < /etc/certbot/certbot.ini.tmp
-# exec crond -f
+
+# exec incrond && crond -f
